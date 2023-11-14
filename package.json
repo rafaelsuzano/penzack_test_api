@@ -1,0 +1,27 @@
+{
+  "name": "apitest",
+  "version": "1.0.0",
+  "description": "test api",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run --spec cypress/e2e/api"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rafaelsuzano/penzack_api.git"
+  },
+  "keywords": [
+    "api"
+  ],
+  "author": "rafael suzano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rafaelsuzano/penzack_api/issues"
+  },
+  "homepage": "https://github.com/rafaelsuzano/penzack_api#readme",
+  "dependencies": {
+    "cypress": "^13.4.0",
+    "cypress-mochawesome-reporter": "^3.6.1",
+    "cypress-plugin-api": "^2.11.1"
+  }
+}

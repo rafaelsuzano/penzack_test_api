@@ -1,1 +1,1 @@
-# penzack_test_api
+# penzack_api

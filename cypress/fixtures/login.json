@@ -1,0 +1,18 @@
+{
+ "Login_OK":
+
+  {
+    "username": "rafaelsuzano@penzack.com",
+    "password": "Suz@no30",
+    "role": "hbb"
+  },
+
+
+  "Login_NOK":
+
+  {
+    "username": "rafaelsuzano_teste@penzack.com",
+    "password": "Suz@no30",
+    "role": "hbb"
+  }
+}
