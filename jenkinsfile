@@ -1,0 +1,26 @@
+pipeline {
+    agent any
+        options {
+    ansiColor('xterm')
+  }
+    stages {
+        stage('Test') {
+            agent {
+                docker {
+                    image 'rafaelsuzano/work:latest'
+                   
+                    reuseNode true
+                }
+            }
+            steps {
+                 script {
+                    def cypressCacheDir = "${WORKSPACE}/.cache/Cypress"
+                    sh "mkdir -p ${cypressCacheDir}"
+                } 
+               
+                 sh 'npx cypress install --force'
+             
+            }
+        }
+    }
+}
