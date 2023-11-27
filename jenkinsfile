@@ -7,7 +7,7 @@ pipeline {
         stage('Test') {
             agent {
                 docker {
-                    image 'rafaelsuzano/work:latest'
+                    image 'rafaelsuzano/cypress:latest'
                    
                     reuseNode true
                 }
