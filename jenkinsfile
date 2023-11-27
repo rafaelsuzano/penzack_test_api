@@ -4,22 +4,14 @@ pipeline {
     ansiColor('xterm')
   }
     stages {
-        stage('Test') {
+        stage('Back-end') {
             agent {
-                docker {
-                    image 'rafaelsuzano/cypress:latest'
-                   
-                    reuseNode true
-                }
+                docker { image 'rafaelsuzano/cypress:latest' }
             }
             steps {
-                 
-                     
-            sh 'npx cypress install '
-                } 
-                 } 
-             
-             
-       
+                sh 'npx cypress install'
+            }
+        }
+  
     }
 }
