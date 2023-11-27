@@ -16,7 +16,7 @@ pipeline {
                   {
                        sh 'npx cypress install --force'
                 } 
-               
+                 } 
              
              
             }
