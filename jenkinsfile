@@ -9,7 +9,7 @@ pipeline {
                 docker { image 'rafaelsuzano/cypress:latest' }
             }
             steps {
-                sh 'npx cypress install'
+                sh 'sudo npm install --unsafe-perm=true --allow-root'
             }
         }
   
