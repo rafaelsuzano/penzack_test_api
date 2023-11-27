@@ -15,7 +15,7 @@ pipeline {
             steps {
                  
                      
-            sh 'npx cypress install --force --unsafe-perm=true --allow-root'
+            sh 'npx cypress install '
                 } 
                  } 
              
