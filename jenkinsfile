@@ -13,12 +13,11 @@ pipeline {
                 }
             }
             steps {
-                 script {
-                    def cypressCacheDir = "${WORKSPACE}/.cache/Cypress"
-                    sh "mkdir -p ${cypressCacheDir}"
+                  {
+                       sh 'npx cypress install --force'
                 } 
                
-                 sh 'npx cypress install --force'
+             
              
             }
         }
