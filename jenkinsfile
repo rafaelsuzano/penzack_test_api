@@ -4,14 +4,23 @@ pipeline {
     ansiColor('xterm')
   }
     stages {
-        stage('Back-end') {
+        stage('Test') {
             agent {
-                docker { image 'rafaelsuzano/cypress:latest' }
+                docker {
+                    image 'rafaelsuzano/work:latest'
+                   
+                    reuseNode true
+                }
             }
             steps {
+                 script {
+                    def cypressCacheDir = "${WORKSPACE}/.cache/Cypress"
+                    sh "mkdir -p ${cypressCacheDir}"
+                } 
+               
+                 sh 'npx cypress install --force'
                 sh 'npx cypress run'
+                   
             }
         }
-  
     }
-}
